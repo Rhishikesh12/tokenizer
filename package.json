@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "postcss-scrollbar": "^0.5.1"
-  }
-}
