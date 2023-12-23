@@ -30,7 +30,7 @@ function App() {
 			const resultsArray = await Promise.all(
 				identities.map(async (identity) => {
 					const response = await fetch(
-						`http://localhost:3001/api/grant/v1/solana_breakdown?identity=${identity}`
+						`https://tokenizer-7bic.onrender.com/api/grant/v1/solana_breakdown?identity=${identity}`
 					);
 					const result = await response.json();
 					return result.length > 0 ? result[0].amount : "000000";
