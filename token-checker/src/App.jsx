@@ -79,9 +79,8 @@ function App() {
 			<Navbar />
 
 			<div>
-				{/* ... (other JSX code) ... */}
 				<div>
-					<div className='px-20 mt-10 mb-6'>
+					<div className='px-10 mt-10 mb-6 lg:px-20'>
 						<div className='leading-loose'>
 							<h3 className=' font-normal text-base text-gray-400 font-space-grotesk'>
 								Check eligibility for different Solana airdrops 🔍
@@ -93,7 +92,7 @@ function App() {
 					</div>
 					<hr className='mx-20 my-5 border-t-1 border-gray-500 cursor-default' />
 
-					<div className='px-20 mt-4 mb-6'>
+					<div className='px-10 lg:px-20 mt-4 mb-6'>
 						<div className='leading-loose'>
 							<h2 className='text-white text-2xl font-bold font-space-grotesk'>
 								Enter addresses
@@ -105,7 +104,7 @@ function App() {
 					</div>
 
 					{/* TextArea */}
-					<div className='max-w-8xl mx-20 my-5'>
+					<div className='max-w-8xl  px-10 lg:px-20'>
 						<textarea
 							className='block p-2.5 w-full text-sm text-gray-900 bg-transparent rounded-lg border font-space-grotesk
 					border-gray-600 focus:ring-blue-500 focus:border-blue-500 dark:bg-transparent dark:border-gray-500
@@ -119,7 +118,7 @@ function App() {
 				</div>
 
 				{/* Buttons */}
-				<div className='flex flex-row justify-between px-20'>
+				<div className='flex flex-col justify-evenly px-10 lg:px-20 lg:flex-row lg:justify-between'>
 					<button
 						className='text-white text-sm items-center font-space-grotesk 
           px-32 py-[8px] border border-gray-600 flex flex-row rounded-lg mt-3 hover:bg-gray-900'
@@ -135,8 +134,9 @@ function App() {
 						Paste
 					</button>
 					<button
-						className='text-black font-medium bg-white hover:bg-slate-300 text-sm items-center font-space-grotesk 
-          px-52 py-[8px] border border-gray-600 flex flex-row rounded-lg mt-3'
+						className='text-black font-medium bg-white hover:bg-slate-300 text-sm 
+						sm:items-center font-space-grotesk 
+          sm:px-32 lg:px-52 py-[8px] border border-gray-600 flex flex-row rounded-lg mt-3'
 						onClick={fetchData}>
 						<img className='mr-2' src={submit} alt='submit' />
 						Check
@@ -146,7 +146,7 @@ function App() {
 
 				{/* Table */}
 				<div>
-					<div className='px-20 mt-5 mb-10 relative overflow-x-auto shadow-md sm:rounded-lg'>
+					<div className='px-10 lg:px-20 mt-10 lg:mt-10 mb-48 lg:mb-10 relative overflow-x-auto shadow-md sm:rounded-lg'>
 						<table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
 							<caption className='py-5 dark:font-space-grotesk text-2xl font-bold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-transparent'>
 								Check Eligibility
