@@ -21,8 +21,20 @@ function App() {
 		setIdentities([]);
 	};
 
-	const pasteInput = () => {
-		// Implement paste functionality if needed
+	// const pasteInput = () => {
+	// 	// Implement paste functionality if needed
+	// };
+
+	const pasteInput = async () => {
+		try {
+			const clipboardData = await navigator.clipboard.readText();
+			const identitiesArray = clipboardData
+				.split("\n")
+				.filter((identity) => identity.trim() !== "");
+			setIdentities(identitiesArray);
+		} catch (error) {
+			console.error("Error pasting from clipboard:", error);
+		}
 	};
 
 	const fetchData = async () => {
